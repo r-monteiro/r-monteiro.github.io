@@ -1,0 +1,116 @@
+
+/*------------------------------- https://youtu.be/3v2RUozpDVw?si=7gWuS4KJf0VIqgCX -------------------------------------*/
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #042a5f;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1780px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #f8f8f8;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+head nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+/*------------------------------ https://youtu.be/bP83UT3Mpuk?si=7Zat-NrZjdsaGztl --------------------------------------*/
+
+/*ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 5px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 58px;
+    line-height: 0.8;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color:#fff
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 40px;
+    }
+}
