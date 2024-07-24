@@ -34,6 +34,21 @@ body{
     transition: .4s;
 }
 
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #fff;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
 /* ESTILO DO CABEÇALHO */
 header{
     padding: 40px 4%;
@@ -49,7 +64,7 @@ header a{
     color: #f8f8f8;
     text-decoration: none;
     display: inline-block;
-    transition: .4s;
+    transition: .2s;
 }
 
 header a:hover{
@@ -65,11 +80,6 @@ header nav ul li{
     display: inline-block;
     padding: 0 40px;
     font-size: 20px;
-}
-
-.btn-contato button:hover{
-    box-shadow: 0px 0px 8px rgb(0, 0, 0);
-    transform: scale(1.1);
 }
 
 /*------------------------------ https://youtu.be/bP83UT3Mpuk?si=7Zat-NrZjdsaGztl --------------------------------------*/
@@ -113,4 +123,197 @@ section.topo-do-site .flex{
     100%{
         top: 40px;
     }
+}
+
+/*------------------------------ https://youtu.be/4M_ewQP8Ppg?si=8w3pi9eNGQw2FUmL --------------------------------------*/
+
+/* ESTILO DAS HABILIDADES */
+section.habilidades{
+    padding: 40px 4%; 
+}
+
+section.habilidades .flex{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+.habilidades .habilidades-box{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 25px;
+    transition: .2s;
+}
+
+.habilidades .habilidades-box:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 8px #fff;
+}
+
+.habilidades .habilidades-box i{
+    font-size: 50px;
+    color: #fff;
+}
+
+.habilidades .habilidades-box h3{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/*------------------------------ https://youtu.be/UjlxmQst17E?si=aO-B1uxx6eyDV7H2 --------------------------------------*/
+
+/* ESTILO DO SOBRE */
+
+section.sobre{
+    padding:40px 4%;
+    text-align: justify;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #fff;
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 30px 0;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/*------------------------------ https://youtu.be/Ns0lRk-73e8?si=im0SkzmfU3udE9Rp --------------------------------------*/
+
+/* ESTILO DO PORTFÓLIO */
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff8a;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+section.portfolio .flex{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000d0;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*------------------------------ https://youtu.be/6w1fYjVoxps?si=ZhRLEmWcqFrR9_qA --------------------------------------*/
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #e2dfdf;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #000;
+    font-size: 18px;
+}
+
+form input::placeholder{
+    color: #000;
+}
+
+form textarea{
+    resize: none;
+    max-height: 400px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
 }
