@@ -7,9 +7,11 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: #042a5f;
+body {
+    background: #042a5f;
     height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .interface{
@@ -19,6 +21,14 @@ body{
 
 .flex{
     display: flex;
+}
+
+.separator {
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 .btn-contato button{
@@ -32,15 +42,24 @@ body{
     transition: .4s;
 }
 
-h2.titulo{
-    color: #fff;
+/* Estilo do título h2 */
+h2.titulo {
+    color: #000;
     font-size: 38px;
     text-align: center;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    background-color:#fff;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
-h2.titulo span{
-    color: #fff;
-}
+/* SEM USO POR ENQUANTO */
+/* h2.titulo span{ */
+    /* color: #fff; */
+/* } */
 
 button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px rgb(0, 0, 0);
@@ -185,6 +204,11 @@ section.topo-do-site .flex{
     color: #fff;
     font-size: 58px;
     line-height: 0.8;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background-color: transparent;
 }
 
 .topo-do-site .txt-topo-site h1 span{
@@ -260,13 +284,12 @@ section.sobre .flex{
 
 .container {
     padding: 20px 0;
-    box-shadow: 0 0 40px 10px #ffffff8a;
+    text-align: center;
 }
 
 .container h2 {
-    padding: 20px 0;
     font-size: 38px;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 
@@ -406,13 +429,13 @@ section.sobre .flex{
 
 .container2 {
     padding: 20px 0;
-    box-shadow: 0 0 40px 10px #ffffff8a;
+    text-align: center;
+
 }
 
 .container2 h2 {
-    padding: 20px 0;
     font-size: 38px;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 
@@ -460,9 +483,8 @@ section.cursos .interface {
 }
 
 section.cursos .titulo {
-    padding: 20px 0;
     font-size: 38px;
-    color: #fff;
+    color: #000;
     display: inline-block;
 }
 
@@ -498,7 +520,6 @@ section.cursos .flex {
 
 section.portfolio{
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff8a;
     text-align: center;
     font-size: 30px;
     color: #fff;
@@ -563,9 +584,8 @@ section.publicacoes .interface {
 }
 
 section.publicacoes .titulo {
-    padding: 20px 0;
     font-size: 38px;
-    color: #fff;
+    color: #000;
     display: inline-block;
 }
 
@@ -607,6 +627,7 @@ section.publicacoes .flex {
 /* ESTILO DAS HABILIDADES */
 section.habilidades{
     padding: 40px 4%;
+    text-align: center;
 }
 
 section.habilidades .flex{
@@ -644,6 +665,8 @@ section.habilidades .flex{
 
 section.formulario{
     padding: 80px 4%;
+    text-align: center;
+
 }
 
 form{
@@ -694,7 +717,6 @@ form .btn-enviar input{
 
 footer{
     padding: 60px 4%;
-    box-shadow: 0 0 40px 10px #ffffff8a;
 }
 
 
@@ -852,5 +874,9 @@ footer .btn-social {
 
     .btn-abrir-menu{
         display: block;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 }
