@@ -840,7 +840,7 @@ footer .btn-social {
     /* PUBLICAÇÕES */
 
     section.publicacoes .flex{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     /* BOTÃO MENU MOBILE APARECER SOMENTE NO MOBILE*/
