@@ -98,15 +98,11 @@ header nav.menu-desktop ul li{
 
 /* ESTILO DO BOTÃO DO MENU MOBILE */
 .btn-abrir-menu {
-    position: fixed;
+    position: static;
     top: 20px; 
     right: 20px;
     z-index: 1000000;
-    width: auto;
-    padding: 0;
-    margin: 0;
 }
-
 
 /* ESTILO DO MENU MOBILE */
 
