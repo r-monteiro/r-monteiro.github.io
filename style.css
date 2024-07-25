@@ -1,6 +1,4 @@
 
-/*------------------------------- https://youtu.be/3v2RUozpDVw?si=7gWuS4KJf0VIqgCX -------------------------------------*/
-
 /* ESTILO GERAL */
 *{
     margin: 0;
@@ -51,7 +49,22 @@ button:hover, form .btn-enviar input:hover{
 
 /* ESTILO DO CABEÇALHO */
 header{
-    padding: 40px 4%;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    box-sizing: border-box;
+    height: 120px;
+}
+
+.logo{
+    margin-top: 10px;
 }
 
 header > .interface{
@@ -67,26 +80,99 @@ header a{
     transition: .2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
     color: #fff;
     transform: scale(1.1);
 }
 
-head nav ul{
+header nav ul{
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
     font-size: 20px;
 }
 
-/*------------------------------ https://youtu.be/bP83UT3Mpuk?si=7Zat-NrZjdsaGztl --------------------------------------*/
+
+/* ESTILO DO BOTÃO DO MENU MOBILE */
+.btn-abrir-menu {
+    position: fixed;
+    top: 20px; 
+    right: 20px;
+    z-index: 1000000;
+}
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-abrir-menu i{
+    color: #fff;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: #042c5c;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 10px 4%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #fff;
+    font-size: 40px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 6%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.overlay-menu{
+    background-color: #00000065;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
 
 /*ESTILO DO TOPO DO SITE */
 section.topo-do-site{
-    padding: 5px 4%;
+    padding: 140px 4%;
+    margin-top: 30px;
 }
 
 section.topo-do-site .flex{
@@ -125,11 +211,402 @@ section.topo-do-site .flex{
     }
 }
 
-/*------------------------------ https://youtu.be/4M_ewQP8Ppg?si=8w3pi9eNGQw2FUmL --------------------------------------*/
+/* ESTILO DO SOBRE */
+
+section.sobre{
+    padding: 0 4%;
+    text-align: justify;
+    margin-top: -170px;
+    margin-bottom: 70px;
+    margin-right: 140px;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 0.8;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #fff;
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 30px 0;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* ESTILO DA TIMELINE EXPERIÊNCIAS PROFISSIONAIS */
+
+.container {
+    padding: 20px 0;
+    box-shadow: 0 0 40px 10px #ffffff8a;
+}
+
+.container h2 {
+    padding: 20px 0;
+    font-size: 38px;
+    color: #fff;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    
+}
+
+.timeline ul li {
+    margin-bottom: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.point {
+    min-width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 100%;
+    z-index: 2;
+    border: 3px #333333 solid;
+    position: relative;
+    left: 1px;
+}
+
+@media (max-width: 800px) {
+    .point {
+        min-width: 15px;
+        height: 15px;
+    }
+
+    html, body {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    html, body {
+        font-size: 14px;
+    }
+    
+    .point {
+        min-width: 12px;
+        height: 12px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    html, body {
+        font-size: 10px;
+    }
+
+    p {
+        padding: 10px !important;
+    }
+}
+
+.timeline ul li .content {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.timeline ul li:nth-child(odd) .content {
+    padding-left: 0;
+}
+
+.timeline ul li:nth-child(odd) .date {
+    padding-right: 0;
+}
+
+.timeline ul li:nth-child(even) .content {
+    padding-right: 0;
+}
+
+.timeline ul li:nth-child(even) .date {
+    padding-left: 0;
+}
+
+.timeline ul li .date {
+    width: 50%;
+    padding: 0 20px;
+    font-weight: normal;
+}
+
+.timeline ul li .date h4 {
+    background-color: #000;
+    width: 100px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.timeline ul li .content h3 {
+    padding: 10px 20px;
+    background-color: #b9b4b4;
+    margin-bottom: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.timeline ul li .content p {
+    padding: 10px 20px;
+    background-color: #fff;
+    margin-top: 0;
+    text-align: justify;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.timeline ul li:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline ul li:nth-child(even) .date h4 {
+    float: right
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    left: 50%;
+    background-color: #fff;
+}
+
+/* ESTILO DA TIMELINE FORMAÇÃO ACADÊMICA */
+
+.container2 {
+    padding: 20px 0;
+    box-shadow: 0 0 40px 10px #ffffff8a;
+}
+
+.container2 h2 {
+    padding: 20px 0;
+    font-size: 38px;
+    color: #fff;
+    text-align: center;
+}
+
+.timeline2 ul li .content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.timeline2 ul li .content2 h3 {
+    padding: 10px;
+    background-color: #d3d3d3;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+.timeline2 ul li .content2 p {
+    padding: 10px;
+    background-color: #fff;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.linha-tempo-formacao .timeline2 img{
+    position: relative;
+}
+
+/* ESTILO DA SEÇÃO CURSOS */
+
+section.cursos {
+    padding: 40px 4%;
+}
+
+section.cursos .interface {
+    text-align: center;
+}
+
+section.cursos .titulo {
+    padding: 20px 0;
+    font-size: 38px;
+    color: #fff;
+    display: inline-block;
+}
+
+section.cursos .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+.cursos .cursos-box {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.2s;
+    background-color: #ffffff8a;
+}
+
+.cursos .cursos-box i {
+    font-size: 50px;
+    color: #fff;
+}
+
+.cursos .cursos-box h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+
+/* ESTILO DO PORTFÓLIO */
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff8a;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+section.portfolio .flex{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    z-index: 0;
+}
+
+.img-port:hover{
+    background-position: 100% 100%
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000d0;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DA SEÇÃO PUBLICAÇÕES */
+
+section.publicacoes {
+    padding: 40px 4%;
+}
+
+section.publicacoes .interface {
+    text-align: center;
+}
+
+section.publicacoes .titulo {
+    padding: 20px 0;
+    font-size: 38px;
+    color: #fff;
+    display: inline-block;
+}
+
+section.publicacoes .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+.publicacoes .publicacoes-box {
+    color: #fff;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 20px;
+    transition: 0.2s;
+    background-color: #ffffff8a;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.publicacoes .publicacoes-box i {
+    font-size: 50px;
+    color: #fff;
+}
+
+.publicacoes .publicacoes-box h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.publicacoes .publicacoes-box:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px #fff;
+}
+
 
 /* ESTILO DAS HABILIDADES */
 section.habilidades{
-    padding: 40px 4%; 
+    padding: 40px 4%;
 }
 
 section.habilidades .flex{
@@ -162,111 +639,6 @@ section.habilidades .flex{
     font-size: 20px;
     margin: 15px 0;
 }
-
-/*------------------------------ https://youtu.be/UjlxmQst17E?si=aO-B1uxx6eyDV7H2 --------------------------------------*/
-
-/* ESTILO DO SOBRE */
-
-section.sobre{
-    padding:40px 4%;
-    text-align: justify;
-}
-
-section.sobre .flex{
-    align-items: center;
-    gap: 10px;
-}
-
-.sobre .txt-sobre{
-    color: #fff;
-}
-
-.sobre .txt-sobre h2{
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 30px;
-}
-
-.sobre .txt-sobre h2 span{
-    color: #fff;
-    display: block;
-}
-.sobre .txt-sobre p{
-    margin: 30px 0;
-}
-
-.sobre .txt-sobre .btn-social button{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: .2s;
-}
-
-/*------------------------------ https://youtu.be/Ns0lRk-73e8?si=im0SkzmfU3udE9Rp --------------------------------------*/
-
-/* ESTILO DO PORTFÓLIO */
-
-section.portfolio{
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff8a;
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
-}
-
-section.portfolio .flex{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-}
-
-.img-port{
-    width: 400px;
-    height: 500px;
-    background-color: #fff;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
-    border-radius: 40px;
-    position: relative;
-}
-
-.img-port:hover{
-    background-position: 100% 100%
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000d0;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-    opacity: 0;
-    transition: .5s;
-}
-
-.overlay:hover{
-    opacity: 1;
-}
-
-/*------------------------------ https://youtu.be/6w1fYjVoxps?si=ZhRLEmWcqFrR9_qA --------------------------------------*/
 
 /* ESTILO DO FORMULÁRIO DE CONTATO */
 
@@ -316,4 +688,164 @@ form .btn-enviar input{
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+}
+
+/* ESTILO RODAPÉ */
+
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #ffffff8a;
+}
+
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+footer .line-footer p i{
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+}
+
+.borda{
+    border-top: 2px solid #fff;
+}
+
+footer .btn-social {
+    display: flex;
+    align-items: center;
+}
+
+/* REMOVER BOTÃO DO MENU MOBILE NA VERSÃO DESKTOP */
+.btn-abrir-menu{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1020px){
+
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+
+    .topo-do-site h1{
+        font-size: 35px;
+        line-height: 0.8;
+        text-align: center;
+    }
+
+    .topo-do-site .img-topo-site img{
+        position: relative;
+        width: 100%;
+    }
+
+    section.topo-do-site p{
+        font-size: 20px;
+    }
+
+    /* HABILIDADES */
+
+    section.habilidades .flex{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SOBRE */
+
+    section.sobre{
+        margin-top: -140px;
+        margin-right: 0px;
+
+    }
+    .sobre .txt-sobre h2{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    section.sobre p{
+        font-size: 20px;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+    
+    /* PORTIFÓLIO */
+
+    section.portfolio{
+        line-height: 1;
+    }
+
+    section.portfolio .flex {
+        display: flex;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        height: 460px;
+    }
+
+    section.portfolio .flex{
+        gap: 30px;
+    }
+
+    /* RODAPÉ */
+    footer .flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+    footer .btn-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* PUBLICAÇÕES */
+
+    section.publicacoes .flex{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* BOTÃO MENU MOBILE APARECER SOMENTE NO MOBILE*/
+
+    .btn-abrir-menu{
+        display: block;
+    }
 }
