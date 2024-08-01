@@ -114,6 +114,14 @@ header nav.menu-desktop ul li{
     font-size: 20px;
 }
 
+/* CIRCULO EM VOLTA DO CABEÇALHO QUANDO SCROLLA MOUSE */
+
+header nav.menu-desktop ul li a.selected {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
 
 /* ESTILO DO BOTÃO DO MENU MOBILE */
 .btn-abrir-menu {
